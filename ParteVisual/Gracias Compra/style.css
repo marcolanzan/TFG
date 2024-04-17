@@ -1,41 +1,217 @@
-import React from "react";
-import "./style.css";
+.gracias-por-su {
+  background-color: #fffaf4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
 
-export const GraciasPorSu = () => {
-  return (
-    <div className="gracias-por-su">
-      <div className="div">
-        <div className="text-wrapper">FIESTAS</div>
-        <div className="text-wrapper-2">¡GRACIAS POR TU COMPRA!</div>
-        <p className="p">Tu entrada ha sido enviada correctamente a tu correo electrónico.</p>
-        <p className="text-wrapper-3">
-          Recuerda que aunque compres varias entradas, a la hora de jugar a Party Wars cada participante necesita su
-          cuenta propia.
-        </p>
-        <img className="mono-fondo-negro" alt="Mono fondo negro" src="mono-fondo-negro-2.png" />
-        <div className="overlap">
-          <div className="rectangle" />
-          <img className="vector" alt="Vector" src="vector.svg" />
-          <div className="group">
-            <div className="overlap-group">
-              <div className="rectangle-2" />
-              <img className="img" alt="Vector" src="image.svg" />
-              <div className="rectangle-3" />
-            </div>
-          </div>
-          <p className="compra-de-entradas">
-            <span className="span">Compra de </span>
-            <span className="text-wrapper-4">Entradas</span>
-          </p>
-          <div className="overlap-wrapper">
-            <div className="overlap-2">
-              <img className="rectangle-4" alt="Rectangle" src="rectangle-52.png" />
-              <div className="text-wrapper-5">#EstásEnBabia</div>
-              <div className="text-wrapper-6">BABIA</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+.gracias-por-su .div {
+  background-color: #fffaf4;
+  height: 2532px;
+  overflow: hidden;
+  position: relative;
+  width: 1170px;
+}
+
+.gracias-por-su .text-wrapper {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 2643px;
+  white-space: nowrap;
+}
+
+.gracias-por-su .text-wrapper-2 {
+  color: #000000;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 64px;
+  font-weight: 900;
+  left: 144px;
+  letter-spacing: 1.28px;
+  line-height: normal;
+  position: absolute;
+  top: 1338px;
+}
+
+.gracias-por-su .p {
+  color: #000000;
+  font-family: "Lato-Light", Helvetica;
+  font-size: 55px;
+  font-weight: 300;
+  left: 49px;
+  letter-spacing: 2.2px;
+  line-height: 85px;
+  position: absolute;
+  text-align: center;
+  top: 1448px;
+  width: 1072px;
+}
+
+.gracias-por-su .text-wrapper-3 {
+  color: #a8a8a8;
+  font-family: "Lato-Regular", Helvetica;
+  font-size: 52px;
+  font-weight: 400;
+  left: 76px;
+  letter-spacing: 1.04px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 1773px;
+  width: 1018px;
+}
+
+.gracias-por-su .mono-fondo-negro {
+  height: 350px;
+  left: 410px;
+  object-fit: cover;
+  position: absolute;
+  top: 2100px;
+  width: 350px;
+}
+
+.gracias-por-su .overlap {
+  height: 1053px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1172px;
+}
+
+.gracias-por-su .rectangle {
+  background-color: #313131;
+  height: 905px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1170px;
+}
+
+.gracias-por-su .vector {
+  height: 65px;
+  left: 159px;
+  position: absolute;
+  top: 180px;
+  width: 39px;
+}
+
+.gracias-por-su .group {
+  height: 99px;
+  left: 973px;
+  position: absolute;
+  top: 163px;
+  width: 78px;
+}
+
+.gracias-por-su .overlap-group {
+  height: 99px;
+  position: relative;
+}
+
+.gracias-por-su .rectangle-2 {
+  background: linear-gradient( 180deg, rgb(255, 222, 89) 0%, rgb(255, 222, 89) 0.01%, rgb(255, 145, 77) 84%, rgb(255, 145, 77) 99% );
+  border-radius: 9px;
+  height: 53px;
+  left: 7px;
+  position: absolute;
+  top: 30px;
+  width: 64px;
+}
+
+.gracias-por-su .img {
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 78px;
+}
+
+.gracias-por-su .rectangle-3 {
+  background-color: #313131;
+  border-radius: 5px;
+  height: 43px;
+  left: 29px;
+  position: absolute;
+  top: 56px;
+  width: 20px;
+}
+
+.gracias-por-su .compra-de-entradas {
+  color: #ffffff;
+  font-family: "Gothic A1-Light", Helvetica;
+  font-size: 64px;
+  font-weight: 400;
+  left: 275px;
+  letter-spacing: 1.28px;
+  line-height: normal;
+  position: absolute;
+  top: 171px;
+}
+
+.gracias-por-su .span {
+  font-weight: 300;
+  letter-spacing: 0.82px;
+}
+
+.gracias-por-su .text-wrapper-4 {
+  font-family: "Gothic A1-Bold", Helvetica;
+  font-weight: 700;
+  letter-spacing: 0.82px;
+}
+
+.gracias-por-su .overlap-wrapper {
+  height: 700px;
+  left: 47px;
+  position: absolute;
+  top: 353px;
+  width: 1125px;
+}
+
+.gracias-por-su .overlap-2 {
+  height: 760px;
+  left: -30px;
+  position: relative;
+  top: -20px;
+  width: 1151px;
+}
+
+.gracias-por-su .rectangle-4 {
+  height: 760px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1132px;
+}
+
+.gracias-por-su .text-wrapper-5 {
+  color: #ffffff;
+  font-family: "Lato-Light", Helvetica;
+  font-size: 40px;
+  font-weight: 300;
+  left: 104px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 622px;
+  white-space: nowrap;
+}
+
+.gracias-por-su .text-wrapper-6 {
+  color: #ffffff;
+  font-family: "Monoton-Regular", Helvetica;
+  font-size: 220px;
+  font-weight: 400;
+  left: 68px;
+  color: #ffffff;
+  font-family: "Monoton-Regular", Helvetica;
+  font-size: 220px;
+  font-weight: 400;
+  left: 68px;
+}

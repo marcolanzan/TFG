@@ -1,0 +1,370 @@
+.sala-de-party-wars {
+  background-color: #fffaf4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.sala-de-party-wars .div {
+  background-color: #fffaf4;
+  height: 2532px;
+  overflow: hidden;
+  position: relative;
+  width: 1170px;
+}
+.sala-de-party-wars .overlap {
+  height: 1053px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1172px;
+}
+.sala-de-party-wars .rectangle {
+  background-color: #313131;
+  height: 905px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1170px;
+}
+.sala-de-party-wars .icon-chevron-down {
+  height: 65px;
+  left: 159px;
+  position: absolute;
+  top: 180px;
+  width: 39px;
+}
+.sala-de-party-wars .group {
+  height: 99px;
+  left: 973px;
+  position: absolute;
+  top: 163px;
+  width: 78px;
+}
+.sala-de-party-wars .overlap-group {
+  height: 99px;
+  position: relative;
+}
+.sala-de-party-wars .rectangle-2 {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 222, 89) 0%,
+    rgb(255, 222, 89) 0.01%,
+    rgb(255, 145, 77) 84%,
+    rgb(255, 145, 77) 99%
+  );
+  border-radius: 9px;
+  height: 53px;
+  left: 7px;
+  position: absolute;
+  top: 30px;
+  width: 64px;
+}
+.sala-de-party-wars .vector {
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 78px;
+}
+.sala-de-party-wars .rectangle-3 {
+  background-color: #313131;
+  border-radius: 5px;
+  height: 43px;
+  left: 29px;
+  position: absolute;
+  top: 56px;
+  width: 20px;
+}
+.sala-de-party-wars .p {
+  color: #ffffff;
+  font-family: "Gothic A1-Light", Helvetica;
+  font-size: 64px;
+  font-weight: 400;
+  left: 275px;
+  letter-spacing: 1.28px;
+  line-height: normal;
+  position: absolute;
+  top: 171px;
+}
+.sala-de-party-wars .text-wrapper {
+  font-weight: 300;
+  letter-spacing: 0.82px;
+}
+.sala-de-party-wars .span {
+  font-family: "Gothic A1-Bold", Helvetica;
+  font-weight: 700;
+  letter-spacing: 0.82px;
+}
+.sala-de-party-wars .overlap-wrapper {
+  height: 700px;
+  left: 47px;
+  position: absolute;
+  top: 353px;
+  width: 1125px;
+}
+.sala-de-party-wars .overlap-2 {
+  height: 760px;
+  left: -30px;
+  position: relative;
+  top: -20px;
+  width: 1151px;
+}
+.sala-de-party-wars .img {
+  height: 760px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1132px;
+}
+.sala-de-party-wars .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Lato-Light", Helvetica;
+  font-size: 40px;
+  font-weight: 300;
+  left: 104px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 622px;
+  white-space: nowrap;
+}
+.sala-de-party-wars .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Monoton-Regular", Helvetica;
+  font-size: 220px;
+  font-weight: 400;
+  left: 68px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 335px;
+  width: 1083px;
+}
+.sala-de-party-wars .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 2643px;
+  white-space: nowrap;
+}
+.sala-de-party-wars .text-wrapper-5 {
+  color: #000000;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 60px;
+  font-weight: 900;
+  left: 318px;
+  letter-spacing: 1.2px;
+  line-height: normal;
+  position: absolute;
+  top: 1091px;
+  white-space: nowrap;
+}
+.sala-de-party-wars .overlap-group-wrapper {
+  height: 160px;
+  left: 189px;
+  position: absolute;
+  top: 2296px;
+  width: 802px;
+}
+.sala-de-party-wars .div-wrapper {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 222, 89) 0%,
+    rgb(255, 222, 89) 0.01%,
+    rgb(255, 145, 77) 84%,
+    rgb(255, 145, 77) 99%
+  );
+  border-radius: 40px;
+  box-shadow: var(--picha);
+  height: 160px;
+  position: relative;
+  width: 800px;
+}
+.sala-de-party-wars .text-wrapper-6 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 55px;
+  font-weight: 800;
+  left: 98px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 38px;
+  width: 626px;
+}
+.sala-de-party-wars .overlap-3 {
+  height: 490px;
+  left: 60px;
+  position: absolute;
+  top: 1203px;
+  width: 1645px;
+}
+.sala-de-party-wars .group-2 {
+  height: 490px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1058px;
+}
+.sala-de-party-wars .overlap-4 {
+  height: 550px;
+  left: -30px;
+  position: relative;
+  top: -20px;
+  width: 1084px;
+}
+.sala-de-party-wars .rectangle-4 {
+  height: 550px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 544px;
+}
+.sala-de-party-wars .text-wrapper-7 {
+  color: #ffffff;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 85px;
+  font-weight: 900;
+  left: 55px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 324px;
+  width: 1029px;
+}
+.sala-de-party-wars .text-wrapper-8 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 427px;
+  width: 344px;
+}
+.sala-de-party-wars .group-3 {
+  height: 490px;
+  left: 579px;
+  position: absolute;
+  top: 0;
+  width: 1066px;
+}
+.sala-de-party-wars .overlap-5 {
+  height: 550px;
+  left: -30px;
+  position: relative;
+  top: -20px;
+  width: 1092px;
+}
+.sala-de-party-wars .text-wrapper-9 {
+  color: #ffffff;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 85px;
+  font-weight: 900;
+  left: 63px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 325px;
+  width: 1029px;
+}
+.sala-de-party-wars .text-wrapper-10 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 68px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 428px;
+  width: 407px;
+}
+.sala-de-party-wars .overlap-6 {
+  height: 490px;
+  left: 61px;
+  position: absolute;
+  top: 1750px;
+  width: 1627px;
+}
+.sala-de-party-wars .group-4 {
+  height: 490px;
+  left: 578px;
+  position: absolute;
+  top: 0;
+  width: 1049px;
+}
+.sala-de-party-wars .overlap-7 {
+  height: 550px;
+  left: -30px;
+  position: relative;
+  top: -20px;
+  width: 1075px;
+}
+.sala-de-party-wars .text-wrapper-11 {
+  color: #ffffff;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 85px;
+  font-weight: 900;
+  left: 46px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 323px;
+  width: 1029px;
+}
+.sala-de-party-wars .text-wrapper-12 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 51px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 426px;
+  width: 344px;
+}
+.sala-de-party-wars .group-5 {
+  height: 490px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1057px;
+}
+.sala-de-party-wars .overlap-8 {
+  height: 550px;
+  left: -30px;
+  position: relative;
+  top: -20px;
+  width: 1083px;
+}
+.sala-de-party-wars .text-wrapper-13 {
+  color: #ffffff;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 85px;
+  font-weight: 900;
+  left: 54px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 323px;
+  width: 1029px;
+}
+.sala-de-party-wars .text-wrapper-14 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 59px;
+}

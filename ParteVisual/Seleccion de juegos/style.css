@@ -1,0 +1,343 @@
+.seleccin-de-juegos {
+  background-color: #fffaf4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.seleccin-de-juegos .div {
+  background-color: #fffaf4;
+  height: 2532px;
+  overflow: hidden;
+  position: relative;
+  width: 1170px;
+}
+.seleccin-de-juegos .overlap {
+  height: 1036px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1170px;
+}
+.seleccin-de-juegos .rectangle {
+  background-color: #313131;
+  height: 905px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1170px;
+}
+.seleccin-de-juegos .icon-chevron-down {
+  height: 65px;
+  left: 159px;
+  position: absolute;
+  top: 180px;
+  width: 39px;
+}
+.seleccin-de-juegos .group {
+  height: 99px;
+  left: 973px;
+  position: absolute;
+  top: 163px;
+  width: 78px;
+}
+.seleccin-de-juegos .overlap-group {
+  height: 99px;
+  position: relative;
+}
+.seleccin-de-juegos .rectangle-2 {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 222, 89) 0%,
+    rgb(255, 222, 89) 0.01%,
+    rgb(255, 145, 77) 84%,
+    rgb(255, 145, 77) 99%
+  );
+  border-radius: 9px;
+  height: 53px;
+  left: 7px;
+  position: absolute;
+  top: 30px;
+  width: 64px;
+}
+.seleccin-de-juegos .vector {
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 78px;
+}
+.seleccin-de-juegos .rectangle-3 {
+  background-color: #313131;
+  border-radius: 5px;
+  height: 43px;
+  left: 29px;
+  position: absolute;
+  top: 56px;
+  width: 20px;
+}
+.seleccin-de-juegos .partida-privada {
+  color: #ffffff;
+  font-family: "Gothic A1-Light", Helvetica;
+  font-size: 64px;
+  font-weight: 400;
+  left: 346px;
+  letter-spacing: 1.28px;
+  line-height: normal;
+  position: absolute;
+  top: 179px;
+}
+.seleccin-de-juegos .text-wrapper {
+  font-weight: 300;
+  letter-spacing: 0.82px;
+}
+.seleccin-de-juegos .span {
+  font-family: "Gothic A1-Bold", Helvetica;
+  font-weight: 700;
+  letter-spacing: 0.82px;
+}
+.seleccin-de-juegos .overlap-wrapper {
+  height: 700px;
+  left: 49px;
+  position: absolute;
+  top: 336px;
+  width: 1076px;
+}
+.seleccin-de-juegos .overlap-2 {
+  height: 760px;
+  left: -30px;
+  position: relative;
+  top: -20px;
+  width: 1132px;
+}
+.seleccin-de-juegos .rectangle-4 {
+  background: linear-gradient(
+    180deg,
+    rgb(123.8, 255, 247.13) 13.6%,
+    rgb(255, 136, 228.57) 74.1%
+  );
+  border-radius: 75px;
+  box-shadow: var(--picha);
+  height: 700px;
+  left: 30px;
+  position: absolute;
+  top: 20px;
+  width: 1072px;
+}
+.seleccin-de-juegos .img {
+  height: 760px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1132px;
+}
+.seleccin-de-juegos .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Lato-SemiBold", Helvetica;
+  font-size: 48px;
+  font-weight: 600;
+  left: 104px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 622px;
+}
+.seleccin-de-juegos .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Monoton-Regular", Helvetica;
+  font-size: 165px;
+  font-weight: 400;
+  left: 73px;
+  letter-spacing: 0;
+  line-height: 217px;
+  position: absolute;
+  top: 136px;
+  width: 1028px;
+}
+.seleccin-de-juegos .frame {
+  height: 1116px;
+  left: 48px;
+  overflow-y: scroll;
+  position: absolute;
+  top: 1100px;
+  width: 1073px;
+}
+.seleccin-de-juegos .overlap-group-wrapper {
+  height: 370px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1074px;
+}
+.seleccin-de-juegos .div-wrapper {
+  background: linear-gradient(
+    180deg,
+    rgb(123.8, 255, 247.13) 13.6%,
+    rgb(255, 136, 228.57) 74.1%
+  );
+  background-image: url(./image-37.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 60px;
+  box-shadow: var(--picha);
+  height: 370px;
+  position: relative;
+  width: 1072px;
+}
+.seleccin-de-juegos .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 96px;
+  font-weight: 900;
+  left: 56px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 180px;
+  width: 1016px;
+}
+.seleccin-de-juegos .group-2 {
+  height: 370px;
+  left: 0;
+  position: absolute;
+  top: 400px;
+  width: 1075px;
+}
+.seleccin-de-juegos .overlap-3 {
+  height: 370px;
+  position: relative;
+  width: 1073px;
+}
+.seleccin-de-juegos .rectangle-5 {
+  background: linear-gradient(
+    180deg,
+    rgb(123.8, 255, 247.13) 13.6%,
+    rgb(255, 136, 228.57) 74.1%
+  );
+  border-radius: 60px;
+  box-shadow: var(--picha);
+  height: 370px;
+  left: 1px;
+  position: absolute;
+  top: 0;
+  width: 1072px;
+}
+.seleccin-de-juegos .image {
+  height: 370px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1072px;
+}
+.seleccin-de-juegos .text-wrapper-5 {
+  color: #ffffff;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 96px;
+  font-weight: 900;
+  left: 57px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 180px;
+  width: 1016px;
+}
+.seleccin-de-juegos .group-3 {
+  height: 440px;
+  left: 0;
+  position: absolute;
+  top: 1200px;
+  width: 1077px;
+}
+.seleccin-de-juegos .overlap-4 {
+  height: 370px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1073px;
+}
+.seleccin-de-juegos .rectangle-6 {
+  background: linear-gradient(
+    180deg,
+    rgb(123.8, 255, 247.13) 13.6%,
+    rgb(255, 136, 228.57) 74.1%
+  );
+  border-radius: 60px;
+  box-shadow: var(--picha);
+  height: 370px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1072px;
+}
+.seleccin-de-juegos .image-2 {
+  height: 370px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1073px;
+}
+.seleccin-de-juegos .no-encuentras-juegos {
+  color: #000000;
+  font-family: "Lato-Bold", Helvetica;
+  font-size: 44px;
+  font-weight: 700;
+  left: 148px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  text-decoration: underline;
+  top: 395px;
+  white-space: nowrap;
+  width: 778px;
+}
+.seleccin-de-juegos .group-4 {
+  height: 370px;
+  left: 0;
+  position: absolute;
+  top: 800px;
+  width: 1074px;
+}
+.seleccin-de-juegos .overlap-5 {
+  background-color: #3d3d3d94;
+  border-radius: 60px;
+  box-shadow: var(--picha);
+  height: 370px;
+  position: relative;
+  width: 1072px;
+}
+.seleccin-de-juegos .image-3 {
+  height: 370px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1071px;
+}
+.seleccin-de-juegos .text-wrapper-6 {
+  color: #ffffff91;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 96px;
+  font-weight: 900;
+  left: 56px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 180px;
+  width: 1016px;
+}
+.seleccin-de-juegos .text-wrapper-7 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 2643px;
+  white-space: nowrap;
+}

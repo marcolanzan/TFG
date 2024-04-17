@@ -1,0 +1,317 @@
+.crea-tu-juego {
+  background-color: #fffaf4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.crea-tu-juego .div {
+  background-color: #fffaf4;
+  height: 2532px;
+  overflow: hidden;
+  position: relative;
+  width: 1170px;
+}
+.crea-tu-juego .overlap {
+  height: 1036px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1170px;
+}
+.crea-tu-juego .rectangle {
+  background-color: #313131;
+  height: 905px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1170px;
+}
+.crea-tu-juego .icon-chevron-down {
+  height: 65px;
+  left: 190px;
+  position: absolute;
+  top: 180px;
+  width: 39px;
+}
+.crea-tu-juego .group {
+  height: 99px;
+  left: 942px;
+  position: absolute;
+  top: 163px;
+  width: 78px;
+}
+.crea-tu-juego .overlap-group {
+  height: 99px;
+  position: relative;
+}
+.crea-tu-juego .rectangle-2 {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 222, 89) 0%,
+    rgb(255, 222, 89) 0.01%,
+    rgb(255, 145, 77) 84%,
+    rgb(255, 145, 77) 99%
+  );
+  border-radius: 9px;
+  height: 53px;
+  left: 7px;
+  position: absolute;
+  top: 30px;
+  width: 64px;
+}
+.crea-tu-juego .vector {
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 78px;
+}
+.crea-tu-juego .rectangle-3 {
+  background-color: #313131;
+  border-radius: 5px;
+  height: 43px;
+  left: 29px;
+  position: absolute;
+  top: 56px;
+  width: 20px;
+}
+.crea-tu-juego .partida-privada {
+  color: #ffffff;
+  font-family: "Gothic A1-Light", Helvetica;
+  font-size: 64px;
+  font-weight: 400;
+  left: 346px;
+  letter-spacing: 1.28px;
+  line-height: normal;
+  position: absolute;
+  top: 179px;
+}
+.crea-tu-juego .text-wrapper {
+  font-weight: 300;
+  letter-spacing: 0.82px;
+}
+.crea-tu-juego .span {
+  font-family: "Gothic A1-Bold", Helvetica;
+  font-weight: 700;
+  letter-spacing: 0.82px;
+}
+.crea-tu-juego .img {
+  height: 65px;
+  left: 159px;
+  position: absolute;
+  top: 180px;
+  width: 39px;
+}
+.crea-tu-juego .overlap-wrapper {
+  height: 99px;
+  left: 973px;
+  position: absolute;
+  top: 163px;
+  width: 78px;
+}
+.crea-tu-juego .overlap-group-wrapper {
+  height: 700px;
+  left: 48px;
+  position: absolute;
+  top: 336px;
+  width: 1076px;
+}
+.crea-tu-juego .overlap-2 {
+  height: 760px;
+  left: -30px;
+  position: relative;
+  top: -20px;
+  width: 1132px;
+}
+.crea-tu-juego .rectangle-4 {
+  background: linear-gradient(
+    180deg,
+    rgb(123.8, 255, 247.13) 13.6%,
+    rgb(255, 136, 228.57) 74.1%
+  );
+  border-radius: 75px;
+  box-shadow: var(--picha);
+  height: 700px;
+  left: 30px;
+  position: absolute;
+  top: 20px;
+  width: 1072px;
+}
+.crea-tu-juego .rectangle-5 {
+  height: 760px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1132px;
+}
+.crea-tu-juego .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Lato-SemiBold", Helvetica;
+  font-size: 48px;
+  font-weight: 600;
+  left: 104px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 622px;
+}
+.crea-tu-juego .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Monoton-Regular", Helvetica;
+  font-size: 165px;
+  font-weight: 400;
+  left: 73px;
+  letter-spacing: 0;
+  line-height: 217px;
+  position: absolute;
+  top: 136px;
+  width: 1028px;
+}
+.crea-tu-juego .overlap-3 {
+  height: 48px;
+  left: 48px;
+  position: absolute;
+  top: 2643px;
+  width: 153px;
+}
+.crea-tu-juego .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+.crea-tu-juego .overlap-4 {
+  height: 301px;
+  left: 68px;
+  position: absolute;
+  top: 1361px;
+  width: 1072px;
+}
+.crea-tu-juego .text-wrapper-5 {
+  color: #000000;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 60px;
+  font-weight: 900;
+  left: 0;
+  letter-spacing: 1.2px;
+  line-height: normal;
+  position: absolute;
+  top: 229px;
+  white-space: nowrap;
+}
+.crea-tu-juego .p {
+  color: #000000;
+  font-family: "Lato-Light", Helvetica;
+  font-size: 55px;
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 2.2px;
+  line-height: 85px;
+  position: absolute;
+  top: 0;
+  width: 1072px;
+}
+.crea-tu-juego .overlap-5 {
+  height: 297px;
+  left: 68px;
+  position: absolute;
+  top: 1673px;
+  width: 1072px;
+}
+.crea-tu-juego .text-wrapper-6 {
+  color: #000000;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 60px;
+  font-weight: 900;
+  left: 0;
+  letter-spacing: 1.2px;
+  line-height: normal;
+  position: absolute;
+  top: 225px;
+  white-space: nowrap;
+}
+.crea-tu-juego .text-wrapper-7 {
+  color: #000000;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 60px;
+  font-weight: 900;
+  left: 68px;
+  letter-spacing: 1.2px;
+  line-height: normal;
+  position: absolute;
+  top: 1272px;
+  white-space: nowrap;
+}
+.crea-tu-juego .text-wrapper-8 {
+  color: #000000;
+  font-family: "Lato-Regular", Helvetica;
+  font-size: 60px;
+  font-weight: 400;
+  left: 626px;
+  letter-spacing: 1.2px;
+  line-height: normal;
+  position: absolute;
+  top: 1134px;
+  white-space: nowrap;
+}
+.crea-tu-juego .text-wrapper-9 {
+  color: #000000;
+  font-family: "Lato-Black", Helvetica;
+  font-size: 60px;
+  font-weight: 900;
+  left: 68px;
+  letter-spacing: 1.2px;
+  line-height: normal;
+  position: absolute;
+  top: 1134px;
+  white-space: nowrap;
+}
+.crea-tu-juego .text-wrapper-10 {
+  color: #000000;
+  font-family: "Lato-Light", Helvetica;
+  font-size: 55px;
+  font-weight: 300;
+  left: 68px;
+  letter-spacing: 2.2px;
+  line-height: 85px;
+  position: absolute;
+  top: 1981px;
+  width: 1072px;
+}
+.crea-tu-juego .div-wrapper {
+  height: 160px;
+  left: 191px;
+  position: absolute;
+  top: 2290px;
+  width: 802px;
+}
+.crea-tu-juego .overlap-6 {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 222, 89) 0%,
+    rgb(255, 222, 89) 0.01%,
+    rgb(255, 145, 77) 84%,
+    rgb(255, 145, 77) 99%
+  );
+  border-radius: 40px;
+  box-shadow: var(--picha);
+  height: 160px;
+  position: relative;
+  width: 800px;
+}
+.crea-tu-juego .text-wrapper-11 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 55px;
+  font-weight: 800;
+  left: 76px;
+  letter-spacing: 0;
+}
