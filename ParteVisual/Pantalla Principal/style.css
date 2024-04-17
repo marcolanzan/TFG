@@ -1,0 +1,514 @@
+.pantalla-principal {
+  background-color: #fffaf4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.pantalla-principal .div {
+  background-color: #fffaf4;
+  height: 2532px;
+  overflow: hidden;
+  position: relative;
+  width: 1170px;
+}
+
+.pantalla-principal .overlap {
+  height: 951px;
+  left: 41px;
+  position: absolute;
+  top: 1499px;
+  width: 1068px;
+}
+
+.pantalla-principal .frame {
+  height: 901px;
+  left: 0;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  width: 1068px;
+}
+
+.pantalla-principal .group {
+  height: 1182px;
+  width: 1067px;
+}
+
+.pantalla-principal .frame-wrapper {
+  height: 1182px;
+}
+
+.pantalla-principal .frame-2 {
+  height: 1182px;
+  position: relative;
+  width: 1067px;
+}
+
+.pantalla-principal .overlap-group {
+  height: 550px;
+  left: 570px;
+  position: absolute;
+  top: 555px;
+  width: 530px;
+}
+
+.pantalla-principal .rectangle {
+  background: linear-gradient(180deg, rgb(123.8, 255, 247.13) 13.6%, rgb(255, 136, 228.57) 74.1%);
+  border-radius: 40px;
+  box-shadow: var(--picha);
+  height: 530px;
+  left: 5px;
+  position: absolute;
+  top: 20px;
+  width: 520px;
+}
+
+.pantalla-principal .img {
+  height: 550px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 530px;
+}
+
+.pantalla-principal .KEMBO {
+  color: #ffffff;
+  font-family: "League Gothic-Regular", Helvetica;
+  font-size: 90px;
+  font-weight: 400;
+  left: 34px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 394px;
+  width: 493px;
+}
+
+.pantalla-principal .text-wrapper {
+  color: #ffffff;
+  font-family: "League Gothic-Regular", Helvetica;
+  font-size: 90px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.pantalla-principal .span {
+  font-family: "Lato-Regular", Helvetica;
+  font-size: 48px;
+}
+
+.pantalla-principal .overlap-2 {
+  height: 550px;
+  left: 570px;
+  position: absolute;
+  top: -20px;
+  width: 530px;
+}
+
+.pantalla-principal .GBN-LOUNGE {
+  color: #ffffff;
+  font-family: "League Gothic-Regular", Helvetica;
+  font-size: 90px;
+  font-weight: 400;
+  left: 37px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 389px;
+  width: 493px;
+}
+
+.pantalla-principal .overlap-3 {
+  height: 550px;
+  left: -5px;
+  position: absolute;
+  top: 555px;
+  width: 530px;
+}
+
+.pantalla-principal .SUPERNOVA {
+  color: #ffffff;
+  font-family: "League Gothic-Regular", Helvetica;
+  font-size: 90px;
+  font-weight: 400;
+  left: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 394px;
+  width: 493px;
+}
+
+.pantalla-principal .overlap-group-2 {
+  height: 550px;
+  left: -5px;
+  position: absolute;
+  top: -20px;
+  width: 532px;
+}
+
+.pantalla-principal .SALA-LOPEZ {
+  color: #ffffff;
+  font-family: "League Gothic-Regular", Helvetica;
+  font-size: 90px;
+  font-weight: 400;
+  left: 39px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 389px;
+  width: 493px;
+}
+
+.pantalla-principal .mono-fondo-negro {
+  height: 350px;
+  left: 369px;
+  object-fit: cover;
+  position: absolute;
+  top: 601px;
+  width: 350px;
+}
+
+.pantalla-principal .overlap-4 {
+  height: 1479px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1200px;
+}
+
+.pantalla-principal .frame-3 {
+  background-color: #fffaf4;
+  height: 1479px;
+  left: 4px;
+  position: absolute;
+  top: 0;
+  width: 1166px;
+}
+
+.pantalla-principal .rectangle-2 {
+  background-color: #313131;
+  height: 905px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1200px;
+}
+
+.pantalla-principal .rectangle-3 {
+  height: 682px;
+  left: 28px;
+  object-fit: cover;
+  position: absolute;
+  top: 574px;
+  width: 1140px;
+}
+
+.pantalla-principal .group-wrapper {
+  height: 150px;
+  left: 48px;
+  overflow-x: scroll;
+  position: absolute;
+  top: 1280px;
+  width: 902px;
+}
+
+.pantalla-principal .group-2 {
+  height: 150px;
+  position: relative;
+  width: 1177px;
+}
+
+.pantalla-principal .div-2 {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 222, 89) 0%,
+    rgb(255, 222, 89) 0.01%,
+    rgb(255, 145, 77) 84%,
+    rgb(255, 145, 77) 99%
+  );
+  border-radius: 75px;
+  box-shadow: var(--picha);
+  height: 150px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 260px;
+}
+
+.pantalla-principal .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 53px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 51px;
+  white-space: nowrap;
+}
+
+.pantalla-principal .overlap-5 {
+  height: 150px;
+  left: 900px;
+  position: absolute;
+  top: 0;
+  width: 269px;
+}
+
+.pantalla-principal .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 51px;
+  width: 269px;
+}
+
+.pantalla-principal .div-wrapper {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 222, 89) 0%,
+    rgb(255, 222, 89) 0.01%,
+    rgb(255, 145, 77) 84%,
+    rgb(255, 145, 77) 99%
+  );
+  border-radius: 75px;
+  box-shadow: var(--picha);
+  height: 150px;
+  left: 600px;
+  position: absolute;
+  top: 0;
+  width: 260px;
+}
+
+.pantalla-principal .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 48px;
+  width: 209px;
+}
+
+.pantalla-principal .overlap-6 {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 222, 89) 0%,
+    rgb(255, 222, 89) 0.01%,
+    rgb(255, 145, 77) 84%,
+    rgb(255, 145, 77) 99%
+  );
+  border-radius: 75px;
+  box-shadow: var(--picha);
+  height: 150px;
+  left: 300px;
+  position: absolute;
+  top: 0;
+  width: 260px;
+}
+
+.pantalla-principal .text-wrapper-5 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 43px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 48px;
+  width: 178px;
+}
+
+.pantalla-principal .text-wrapper-6 {
+  color: #ffffff;
+  font-family: "Lato-Light", Helvetica;
+  font-size: 40px;
+  font-weight: 300;
+  left: 145px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 1114px;
+  white-space: nowrap;
+}
+
+.pantalla-principal .text-wrapper-7 {
+  color: #ffffff;
+  font-family: "Lato-Light", Helvetica;
+  font-size: 40px;
+  font-weight: 300;
+  left: 802px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 1035px;
+  white-space: nowrap;
+}
+
+.pantalla-principal .rectangle-4 {
+  background-color: #424242;
+  border-radius: 50px;
+  height: 167px;
+  left: 32px;
+  position: absolute;
+  top: 352px;
+  width: 1106px;
+}
+
+.pantalla-principal .rectangle-5 {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 222, 89) 0%,
+    rgb(255, 222, 89) 0.01%,
+    rgb(255, 145, 77) 84%,
+    rgb(255, 145, 77) 99%
+  );
+  border-radius: 50px;
+  box-shadow: 0px 5px 25px 10px #00000040;
+  height: 135px;
+  left: 987px;
+  position: absolute;
+  top: 370px;
+  width: 135px;
+}
+
+.pantalla-principal .flexcontainer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 110px;
+  left: 58px;
+  position: absolute;
+  top: 148px;
+  width: 373px;
+}
+
+.pantalla-principal .text {
+  align-self: stretch;
+  color: #ffffff;
+  font-family: "Gothic A1-Light", Helvetica;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+}
+
+.pantalla-principal .text-wrapper-8 {
+  font-weight: 300;
+  letter-spacing: 1.12px;
+}
+
+.pantalla-principal .text-wrapper-9 {
+  font-family: "Gothic A1-ExtraBold", Helvetica;
+  font-weight: 800;
+  letter-spacing: 0.64px;
+}
+
+.pantalla-principal .text-wrapper-10 {
+  color: #737373;
+  font-family: "Lato-Regular", Helvetica;
+  font-size: 54px;
+  font-weight: 400;
+  left: 201px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 404px;
+}
+
+.pantalla-principal .text-wrapper-11 {
+  color: #ffffff;
+  font-family: "Monoton-Regular", Helvetica;
+  font-size: 145px;
+  font-weight: 400;
+  left: 117px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 940px;
+  width: 1083px;
+}
+
+.pantalla-principal .icon-horizontal {
+  height: 80px;
+  left: 73px;
+  position: absolute;
+  top: 399px;
+  width: 1024px;
+}
+
+.pantalla-principal .icon-chevron-down {
+  height: 18px;
+  left: 450px;
+  position: absolute;
+  top: 223px;
+  width: 30px;
+}
+
+.pantalla-principal .vector-wrapper {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 222, 89) 0%,
+    rgb(255, 222, 89) 0.01%,
+    rgb(255, 145, 77) 84%,
+    rgb(255, 145, 77) 99%
+  );
+  border-radius: 50px;
+  box-shadow: 0px 5px 25px 10px #00000040;
+  height: 135px;
+  left: 995px;
+  position: absolute;
+  top: 39px;
+  width: 135px;
+}
+
+.pantalla-principal .vector {
+  height: 75px;
+  left: 30px;
+  position: absolute;
+  top: 30px;
+  width: 75px;
+}
+
+.pantalla-principal .text-wrapper-12 {
+  color: #a8a8a8;
+  font-family: "Lato-Bold", Helvetica;
+  font-size: 40px;
+  font-weight: 700;
+  left: 993px;
+  letter-spacing: 0.8px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 206px;
+  white-space: nowrap;
+}
+
+.pantalla-principal .text-wrapper-13 {
+  color: #ffffff;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 2643px;
+  white-space: nowrap;
+}
