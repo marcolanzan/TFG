@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Plan } from './plan.entity';
+import { Plan } from '../Entity/plan.entity';
 
 @Injectable()
 export class PlanService {
@@ -15,7 +15,7 @@ export class PlanService {
   }
 
   async findOne(id: number): Promise<Plan | undefined> {
-    return await this.planRepository.findOne(id);
+    return await this.planRepository.findOne( {where: { id }});
   }
 
   async create(planData: Partial<Plan>): Promise<Plan> {

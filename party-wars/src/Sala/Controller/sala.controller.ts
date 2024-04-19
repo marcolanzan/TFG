@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
-import { SalaService } from './sala.service';
-import { Sala } from './sala.entity';
+import { Sala } from '../Entity/sala.entity';
+import { SalaService } from '../Service/sala.service';
+
 
 @Controller('salas')
 export class SalaController {

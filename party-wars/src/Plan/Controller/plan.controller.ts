@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
-import { PlanService } from './plan.service';
-import { Plan } from './plan.entity';
+import { Plan } from '../Entity/plan.entity';
+import { PlanService } from '../Service/plan.service';
+
 
 @Controller('planes')
 export class PlanController {

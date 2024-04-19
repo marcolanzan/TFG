@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Sala } from './sala.entity';
+import { Sala } from '../Entity/sala.entity';
 
 @Injectable()
 export class SalaService {
@@ -15,7 +15,7 @@ export class SalaService {
   }
 
   async findOne(id: number): Promise<Sala | undefined> {
-    return await this.salaRepository.findOne(id);
+    return await this.salaRepository.findOne( {where: { id }});
   }
 
   async create(salaData: Partial<Sala>): Promise<Sala> {

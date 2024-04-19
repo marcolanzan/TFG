@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Evento } from './evento.entity';
+import { Evento } from '../Entity/evento.entity';
 
 @Injectable()
 export class EventoService {
@@ -15,8 +15,9 @@ export class EventoService {
   }
 
   async findOne(id: number): Promise<Evento | undefined> {
-    return await this.eventoRepository.findOne(id);
+    return await this.eventoRepository.findOne({ where: { id } });
   }
+
 
   async create(evento: Evento): Promise<Evento> {
     return await this.eventoRepository.save(evento);
