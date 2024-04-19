@@ -8,17 +8,14 @@ const API_KEY_PROD = 'PROD1212121SA';
 
 const client = new Client({
   user: 'postgres',
-  host: 'postgredb.c9ck840cwbfh.us-east-1.rds.amazonaws.com',
-  database: 'dam',
+  host: 'demo-postgres.ca3gssmimisb.us-east-1.rds.amazonaws.com',
+  database: 'sampleDB',
   password: 'LUCASLUCAS',
   port: 5432,
   ssl: true, 
 });
 client.connect();
-client.query('SELECT * FROM task ORDER BY id ASC', (err, res) => {
-  console.error(err);
-  console.log(res.rows);
-});
+
 
 @Global()
 @Module({
