@@ -31,11 +31,11 @@ const UserList = () => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View style={styles.userItem}>
-            <Text>ID: {item.id}</Text>
-            <Text>Nombre: {item.nome}</Text>
-            <Text>Email: {item.email}</Text>
-            <Text>Plan: {item.plan}</Text>
-            <Text>Descripción Personal: {item.descripcionPersonal}</Text>
+            <Text style={styles.title}>ID: {item.id}</Text>
+            <Text style={styles.info}>Nombre: {item.nome}</Text>
+            <Text style={styles.info}>Email: {item.email}</Text>
+            <Text style={styles.info}>Plan: {item.plan}</Text>
+            <Text style={styles.description}>Descripción Personal: {item.descripcionPersonal}</Text>
           </View>
         )}
       />
@@ -44,29 +44,32 @@ const UserList = () => {
 };
 
 
-// Función para convertir un ArrayBuffer a una cadena Base64
-
-
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
+    backgroundColor: "#fff",
+    paddingHorizontal: 20,
   },
   userItem: {
     backgroundColor: "#f9c2ff",
+    borderRadius: 10,
     padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
+    marginBottom: 20,
   },
-  image: {
-    width: 50,
-    height: 50,
+  title: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 5,
+  },
+  info: {
+    fontSize: 16,
+    marginBottom: 5,
+  },
+  description: {
+    fontSize: 14,
+    fontStyle: "italic",
   },
 });
 
 
 export default UserList;
-
-
-
-
-

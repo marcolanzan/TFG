@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Put, Delete, Query } from '@nestjs/common';
 import { Usuario } from '../Entity/usuario.entity';
 import { UsuarioService } from '../Service/usuario.service';
 
@@ -30,4 +30,14 @@ export class UsuarioController {
   remove(@Param('id') id: string): Promise<void> {
     return this.usuarioService.remove(parseInt(id, 10));
   }
+  @Get('login/:correo/:password')
+  async login(
+    @Param('correo') correo: string,
+    @Param('password') password: string,
+  ): Promise<Usuario | null> {
+    return this.usuarioService.findByEmailAndPassword(correo, password);
+  }
+  
+
+
 }

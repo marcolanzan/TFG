@@ -2,13 +2,13 @@ import 'react-native-gesture-handler';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import Navigation from './src/navigation/Navigation';
-
+import Login from './src/screens/Login';
 export default function App() {
   return (
 
     <NavigationContainer>
       {/*1º) <NavigationStacks /> */}
-      <Navigation />
+      <Login />
     </NavigationContainer>
   );
       
