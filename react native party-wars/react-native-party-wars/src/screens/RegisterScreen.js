@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, Alert, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const EditProfileScreen = () => {
+const RegisterScreen = () => {
   const navigation = useNavigation();
-  const [name, setName] = useState('Nombre'); // Inicializa con el valor del nombre del usuario
-  const [email, setEmail] = useState('correo@example.com'); // Inicializa con el valor del correo del usuario
-  const [password, setPassword] = useState(''); // Inicializa con una cadena vacía para la contraseña
-  const [plan, setPlan] = useState('Plan básico'); // Inicializa con el plan básico
-  const [description, setDescription] = useState(''); // Inicializa con una descripción vacía
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [plan, setPlan] = useState('Plan básico');
+  const [description, setDescription] = useState('');
   const [image, setImage] = useState(null); // Considera cómo manejar las imágenes en tu aplicación
 
-  const handleUpdateProfile = async () => {
+  const handleRegister = async () => {
     try {
-      // Aquí puedes enviar los datos actualizados del usuario al servidor
-      const updatedUserData = {
+      const userData = {
         nome: name,
         email: email,
         password: password,
@@ -23,30 +22,33 @@ const EditProfileScreen = () => {
         imagen: image,
       };
 
-      // Por ejemplo:
-      // const response = await fetch('http://192.168.1.90:3000/usuarios/usuario_id', {
-      //   method: 'PUT',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(updatedUserData),
-      // });
+      const response = await fetch('http://192.168.1.90:3000/usuarios', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
 
-      // if (!response.ok) {
-      //   throw new Error('Error al actualizar el usuario');
-      // }
+      if (!response.ok) {
+        throw new Error('Error al registrar el usuario');
+      }
 
-      // Una vez actualizados los datos, puedes redirigir al usuario a una pantalla de confirmación o a otra pantalla
-      navigation.navigate('Profile');
+      // Una vez registrado, redirigir al usuario a la pantalla 'Main'
+      navigation.navigate('Main');
     } catch (error) {
-      console.error('Error al actualizar usuario:', error);
-      Alert.alert('Error', 'Ocurrió un error al actualizar el usuario. Por favor, inténtalo de nuevo.');
+      console.error('Error al registrar usuario:', error);
+      Alert.alert('Error', 'Ocurrió un error al registrar el usuario. Por favor, inténtalo de nuevo.');
     }
+  };
+
+  const goToLogin = () => {
+    navigation.navigate('Login');
   };
 
   return (
     <View style={styles.container}>
-      <Text>Editar Perfil</Text>
+      <Text>Registro</Text>
       <TextInput
         placeholder="Nombre"
         value={name}
@@ -80,7 +82,10 @@ const EditProfileScreen = () => {
       />
       {/* Considera cómo manejar la carga de imágenes en tu aplicación */}
       {/* Aquí puedes agregar un componente para cargar imágenes */}
-      <Button title="Actualizar Perfil" onPress={handleUpdateProfile} />
+      <Button title="Registrarse" onPress={handleRegister} />
+      <TouchableOpacity onPress={goToLogin}>
+        <Text style={styles.link}>¿Ya tienes una cuenta? <Text style={{ color: 'blue' }}>Pincha aquí</Text></Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -97,9 +102,12 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     width: 250,
   },
+  link: {
+    marginTop: 10,
+  },
 });
 
-export default EditProfileScreen;
+export default RegisterScreen;
 
 
 
