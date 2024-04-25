@@ -1,40 +1,39 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Alert, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, Alert, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const EditProfileScreen = () => {
+const EditProfileScreen = ({ route }) => {
   const navigation = useNavigation();
-  const [name, setName] = useState('Nombre'); // Inicializa con el valor del nombre del usuario
-  const [email, setEmail] = useState('correo@example.com'); // Inicializa con el valor del correo del usuario
-  const [password, setPassword] = useState(''); // Inicializa con una cadena vacía para la contraseña
-  const [plan, setPlan] = useState('Plan básico'); // Inicializa con el plan básico
-  const [description, setDescription] = useState(''); // Inicializa con una descripción vacía
-  const [image, setImage] = useState(null); // Considera cómo manejar las imágenes en tu aplicación
+  const { id } = route.params; // Obtén el ID del usuario de los parámetros de ruta
+
+  // Utiliza los estados locales para almacenar los datos del usuario
+  const [name, setName] = useState(''); 
+  const [email, setEmail] = useState(''); 
+  const [password, setPassword] = useState(''); 
+  const [plan, setPlan] = useState(''); 
+  const [description, setDescription] = useState(''); 
 
   const handleUpdateProfile = async () => {
     try {
-      // Aquí puedes enviar los datos actualizados del usuario al servidor
       const updatedUserData = {
-        nome: name,
+        name: name,
         email: email,
         password: password,
         plan: plan,
-        descripcionPersonal: description,
-        imagen: image,
+        description: description,
       };
 
-      // Por ejemplo:
-      // const response = await fetch('http://192.168.1.90:3000/usuarios/usuario_id', {
-      //   method: 'PUT',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(updatedUserData),
-      // });
+      const response = await fetch(`http://192.168.1.90:3000/usuarios/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedUserData),
+      });
 
-      // if (!response.ok) {
-      //   throw new Error('Error al actualizar el usuario');
-      // }
+      if (!response.ok) {
+        throw new Error('Error al actualizar el usuario');
+      }
 
       // Una vez actualizados los datos, puedes redirigir al usuario a una pantalla de confirmación o a otra pantalla
       navigation.navigate('Profile');
@@ -78,8 +77,6 @@ const EditProfileScreen = () => {
         onChangeText={setDescription}
         style={styles.input}
       />
-      {/* Considera cómo manejar la carga de imágenes en tu aplicación */}
-      {/* Aquí puedes agregar un componente para cargar imágenes */}
       <Button title="Actualizar Perfil" onPress={handleUpdateProfile} />
     </View>
   );
