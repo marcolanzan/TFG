@@ -1,29 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, Alert, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage'; // Importa AsyncStorage
 
 const EditProfileScreen = ({ route }) => {
   const navigation = useNavigation();
-  const { id } = route.params; // Obtén el ID del usuario de los parámetros de ruta
 
   // Utiliza los estados locales para almacenar los datos del usuario
-  const [name, setName] = useState(''); 
+  const [nome, setnome] = useState(''); 
   const [email, setEmail] = useState(''); 
   const [password, setPassword] = useState(''); 
   const [plan, setPlan] = useState(''); 
-  const [description, setDescription] = useState(''); 
+  const [descripcionPersonal, setdescripcionPersonal] = useState(''); 
+  const [id, setId] = useState(0); // Establece el estado del ID
+
+  useEffect(() => {
+    // Cargar los datos del usuario al cargar la pantalla
+    loadUserData();
+  }, []);
+
+  const loadUserData = async () => {
+    try {
+      // Obtener los datos del usuario guardados en AsyncStorage
+      const userData = await AsyncStorage.getItem('userData');
+      if (userData) {
+        // Si hay datos del usuario, actualizar los estados locales
+        const { id, nome, email, password, plan, descripcionPersonal } = JSON.parse(userData);
+        setId(id); // Establece el estado del ID
+        setnome(nome);
+        setEmail(email);
+        setPassword(password);
+        setPlan(plan);
+        setdescripcionPersonal(descripcionPersonal);
+      }
+    } catch (error) {
+      console.error('Error al cargar los datos del usuario:', error);
+    }
+  };
 
   const handleUpdateProfile = async () => {
     try {
       const updatedUserData = {
-        name: name,
+        nome: nome,
         email: email,
         password: password,
         plan: plan,
-        description: description,
+        descripcionPersonal: descripcionPersonal,
       };
 
-      const response = await fetch(`http://192.168.1.90:3000/usuarios/${id}`, {
+      const response = await fetch(`http://192.168.1.90:3000/usuarios/${id}`, { // Utiliza el ID para construir la URL
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -48,8 +73,8 @@ const EditProfileScreen = ({ route }) => {
       <Text>Editar Perfil</Text>
       <TextInput
         placeholder="Nombre"
-        value={name}
-        onChangeText={setName}
+        value={nome}
+        onChangeText={setnome}
         style={styles.input}
       />
       <TextInput
@@ -73,8 +98,8 @@ const EditProfileScreen = ({ route }) => {
       />
       <TextInput
         placeholder="Descripción personal"
-        value={description}
-        onChangeText={setDescription}
+        value={descripcionPersonal}
+        onChangeText={setdescripcionPersonal}
         style={styles.input}
       />
       <Button title="Actualizar Perfil" onPress={handleUpdateProfile} />

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import Favorite from '../screens/Favorite';
 import Account from '../screens/Account';
 import Main from '../screens/Main';
 import LoginScreen from '../screens/Login'; // Importa el componente LoginScreen
@@ -16,17 +15,6 @@ export default function Navigation() {
 
   return (
     <Tab.Navigator initialRouteName="Login">
-      <Tab.Screen
-        name="Favorite"
-        component={Favorite}
-        options={{
-          tabBarLabel: 'Favoritos',
-          tabBarIcon: ({ color, size }) => (
-            <Icon name="heart" color={color} size={size} />
-          ),
-          tabBarVisible: showTabs,
-        }}
-      />
       <Tab.Screen
         name="Account"
         component={Account}
@@ -88,9 +76,6 @@ export default function Navigation() {
       component = {CrearJuego}
       options = {{
         tabBarLabel: 'Crear Juego',
-        tabBarIcon: ({ color, size }) => (
-          <Icon name="plus" color={color} size={size} />
-        ),
       }}
       />
       <Tab.Screen

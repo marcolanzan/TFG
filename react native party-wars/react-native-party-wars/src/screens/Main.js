@@ -1,18 +1,17 @@
-
-// Importa las dependencias necesarias
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+const Main = ({ route }) => {
+  // Extrae el ID del usuario de las props de navegación
+  const { id } = route.params;
 
-// Define el componente de la pantalla Main
-const Main = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>¡Bienvenido a la pantalla principal!</Text>
+      <Text style={styles.text}>¡Bienvenido a la pantalla principal! {id}</Text>
     </View>
   );
 };
 
-// Estilos para el componente
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -25,5 +24,4 @@ const styles = StyleSheet.create({
   },
 });
 
-// Exporta el componente Main
 export default Main;

@@ -51,7 +51,7 @@ const ViewGamesScreen = () => {
         renderItem={renderGameItem}
         keyExtractor={(item) => item.id.toString()}
       />
-            <Text style={{ marginVertical: 10 }}>¿No tienes una cuenta aún? <Text style={{ color: 'blue' }} onPress={handleCrearJuego}>Registrarse</Text></Text>
+            <Text style={{ marginVertical: 10 }}>¿No ves ningún juego que te convenza? <Text style={{ color: 'blue' }} onPress={handleCrearJuego}>¡Crea el tuyo!</Text></Text>
     </View>
   );
 };

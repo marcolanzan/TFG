@@ -1,7 +1,6 @@
-import React from react;
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, Alert } from 'react-native';
-
+import { StyleSheet } from 'react-native';
 const CreateRoomScreen = () => {
   const [nombre, setNombre] = useState('');
   const [descripcion, setDescripcion] = useState('');
