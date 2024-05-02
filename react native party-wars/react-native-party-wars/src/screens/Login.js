@@ -8,6 +8,7 @@ const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loggedInUser, setLoggedInUser] = useState(null);
+  const [loginError, setLoginError] = useState(false); // Estado para controlar el error de inicio de sesión
 
   // Utiliza useFocusEffect para llamar a checkSession() cada vez que el componente se enfoque
   useFocusEffect(
@@ -46,11 +47,12 @@ const LoginScreen = () => {
         navigation.navigate('Main', { id: userData.id });
       } else {
         // Si no se recibe un ID de usuario válido, mostrar un mensaje de error
+        setLoginError(true); // Establecer el estado de error de inicio de sesión como verdadero
         throw new Error('Correo electrónico o contraseña incorrectos');
       }
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
-      Alert.alert('Error', 'Correo electrónico o contraseña incorrectos');
+      setLoginError(true); // Establecer el estado de error de inicio de sesión como verdadero
     }
   };
 
@@ -94,6 +96,9 @@ const LoginScreen = () => {
             style={{ borderWidth: 1, padding: 10, marginVertical: 10, width: 250 }}
           />
           <Button title="Iniciar Sesión" onPress={handleLogin} />
+          {loginError && (
+            <Text style={{ color: 'red' }}>El correo o la contraseña es incorrecto, inténtelo de nuevo</Text>
+          )}
           <Text style={{ marginVertical: 10 }}>¿No tienes una cuenta aún? <Text style={{ color: 'blue' }} onPress={handleRegister}>Registrarse</Text></Text>
         </>
       )}
@@ -102,6 +107,5 @@ const LoginScreen = () => {
 };
 
 export default LoginScreen;
-
 
 
