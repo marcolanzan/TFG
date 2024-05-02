@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, Alert } from 'react-native';
 import { StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 const CreateRoomScreen = () => {
   const [nombre, setNombre] = useState('');
   const [descripcion, setDescripcion] = useState('');
@@ -9,11 +11,12 @@ const CreateRoomScreen = () => {
   const [edadMaxima, setEdadMaxima] = useState('');
   const [localizacion, setLocalizacion] = useState('');
   const [numeroParticipantes, setNumeroParticipantes] = useState('');
+  const navigation = useNavigation();
 
   const handleVerJuegos = () => {
-    // Redirige a la pantalla de registro
     navigation.navigate('VerJuegos');
   };
+
   const handleCreateRoom = async () => {
     try {
       const response = await fetch('http://192.168.1.90:3000/salas', {
@@ -36,10 +39,8 @@ const CreateRoomScreen = () => {
         throw new Error('Error al crear la sala');
       }
 
-      // Si la sala se crea correctamente, muestra un mensaje de éxito
       Alert.alert('Sala Creada', 'La sala se ha creado exitosamente');
 
-      // Limpiar los campos después de crear la sala
       setNombre('');
       setDescripcion('');
       setTematica('');
@@ -54,78 +55,80 @@ const CreateRoomScreen = () => {
     }
   };
 
-  
-
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Crear Sala</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Crear Sala</Text>
       <TextInput
         placeholder="Nombre"
         value={nombre}
         onChangeText={setNombre}
-        style={{ borderWidth: 1, padding: 10, marginVertical: 10, width: 250 }}
+        style={styles.input}
       />
       <TextInput
         placeholder="Descripción"
         value={descripcion}
         onChangeText={setDescripcion}
-        style={{ borderWidth: 1, padding: 10, marginVertical: 10, width: 250 }}
+        style={styles.input}
       />
       <TextInput
         placeholder="Temática"
         value={tematica}
         onChangeText={setTematica}
-        style={{ borderWidth: 1, padding: 10, marginVertical: 10, width: 250 }}
+        style={styles.input}
       />
       <TextInput
         placeholder="Edad Mínima"
         value={edadMinima}
         onChangeText={setEdadMinima}
         keyboardType="numeric"
-        style={{ borderWidth: 1, padding: 10, marginVertical: 10, width: 250 }}
+        style={styles.input}
       />
       <TextInput
         placeholder="Edad Máxima"
         value={edadMaxima}
         onChangeText={setEdadMaxima}
         keyboardType="numeric"
-        style={{ borderWidth: 1, padding: 10, marginVertical: 10, width: 250 }}
+        style={styles.input}
       />
       <TextInput
         placeholder="Localización"
         value={localizacion}
         onChangeText={setLocalizacion}
-        style={{ borderWidth: 1, padding: 10, marginVertical: 10, width: 250 }}
+        style={styles.input}
       />
       <TextInput
         placeholder="Número de Participantes"
         value={numeroParticipantes}
         onChangeText={setNumeroParticipantes}
         keyboardType="numeric"
-        style={{ borderWidth: 1, padding: 10, marginVertical: 10, width: 250 }}
+        style={styles.input}
       />
       <Button title="Confirmar Ajustes" onPress={handleCreateRoom} />
     </View>
   );
 };
+
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      paddingHorizontal: 20,
-    },
-    title: {
-      fontSize: 24,
-      marginBottom: 20,
-    },
-    input: {
-      borderWidth: 1,
-      borderColor: '#ccc',
-      borderRadius: 5,
-      padding: 10,
-      marginBottom: 10,
-      width: '100%',
-    },
-  });
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+  },
+  title: {
+    fontSize: 24,
+    marginBottom: 20,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 10,
+    width: '100%',
+  },
+});
+
 export default CreateRoomScreen;
+
+
