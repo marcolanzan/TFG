@@ -1,8 +1,7 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Post, Put, Delete, Param, Body } from '@nestjs/common';
 import { Juego } from '../Entity/juego.entity';
 import { Pregunta } from '../Entity/pregunta.entity';
-import { JuegosService } from '../Service/juego.entity';
-
+import { JuegosService } from '../Service/juego.service';
 
 @Controller('juegos')
 export class JuegosController {
@@ -13,8 +12,16 @@ export class JuegosController {
         return this.juegosService.findAll();
     }
 
-    @Get(':id/preguntas')
-    findPreguntasByJuegoId(@Param('id') id: number): Promise<Pregunta[]> {
-        return this.juegosService.findPreguntas(id);
+  
+
+    @Post()
+    create(@Body() juego: Juego): Promise<Juego> {
+        return this.juegosService.create(juego);
+    }
+
+   
+    @Delete(':id')
+    delete(@Param('id') id: number): Promise<void> {
+        return this.juegosService.delete(id);
     }
 }

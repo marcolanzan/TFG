@@ -1,3 +1,5 @@
+
+
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -7,8 +9,8 @@ import { Pregunta } from '../Entity/pregunta.entity';
 @Injectable()
 export class JuegosService {
     constructor(
-        @InjectRepository(Juego) private juegosRepository: Repository<Juego>,
-        @InjectRepository(Pregunta) private preguntasRepository: Repository<Pregunta>,
+        @InjectRepository(Juego) private readonly juegosRepository: Repository<Juego>,
+        @InjectRepository(Pregunta) private readonly preguntasRepository: Repository<Pregunta>,
     ) {}
 
     async findAll(): Promise<Juego[]> {
@@ -16,8 +18,14 @@ export class JuegosService {
         return this.juegosRepository.find();
     }
 
-    async findPreguntas(id: number): Promise<Pregunta[]> {
-        return this.preguntasRepository.find({
-        })
+   
+    async create(juego: Juego): Promise<Juego> {
+        return this.juegosRepository.save(juego);
+    }
+   
+    
+
+    async delete(id: number): Promise<void> {
+        await this.juegosRepository.delete(id);
     }
 }

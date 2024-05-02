@@ -10,6 +10,15 @@ const CreateGameScreen = () => {
 
   const handleCreateGame = async () => {
     try {
+      // Imprimir los datos antes de enviar la solicitud al backend
+      console.log('Datos del juego:', {
+        nombre,
+        propiedadJuego,
+        descripcionJuego,
+        categoriaJuego,
+        normasJuego,
+      });
+
       const response = await fetch('http://192.168.1.90:3000/juegos', {
         method: 'POST',
         headers: {
@@ -82,3 +91,6 @@ const CreateGameScreen = () => {
 };
 
 export default CreateGameScreen;
+
+
+

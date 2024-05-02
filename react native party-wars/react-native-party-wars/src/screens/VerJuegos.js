@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, ActivityIndicator } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+
 const ViewGamesScreen = () => {
-    const navigation = useNavigation();
+  const navigation = useNavigation();
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetchGames();
-  }, []);
 
   const fetchGames = async () => {
     try {
@@ -22,9 +19,19 @@ const ViewGamesScreen = () => {
     }
   };
 
+  useEffect(() => {
+    fetchGames(); // Realizar la primera llamada al cargar el componente
+
+    const intervalId = setInterval(fetchGames, 60000); // Realizar la llamada cada 60 segundos
+
+    // Limpiar el intervalo al desmontar el componente
+    return () => clearInterval(intervalId);
+  }, []);
+
   const handleCrearJuego = () => {
-      navigation.navigate('CrearJuego');
-  }
+    navigation.navigate('CrearJuego');
+  };
+
   const renderGameItem = ({ item }) => (
     <View style={{ padding: 10, borderBottomWidth: 1, borderBottomColor: '#ccc' }}>
       <Text style={{ fontWeight: 'bold' }}>{item.nombre}</Text>
@@ -51,9 +58,11 @@ const ViewGamesScreen = () => {
         renderItem={renderGameItem}
         keyExtractor={(item) => item.id.toString()}
       />
-            <Text style={{ marginVertical: 10 }}>¿No ves ningún juego que te convenza? <Text style={{ color: 'blue' }} onPress={handleCrearJuego}>¡Crea el tuyo!</Text></Text>
+      <Text style={{ marginVertical: 10 }}>¿No ves ningún juego que te convenza? <Text style={{ color: 'blue' }} onPress={handleCrearJuego}>¡Crea el tuyo!</Text></Text>
     </View>
   );
 };
 
 export default ViewGamesScreen;
+
+
