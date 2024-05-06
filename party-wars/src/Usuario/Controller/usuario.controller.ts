@@ -18,6 +18,7 @@ export class UsuarioController {
 
   @Post()
   create(@Body() usuarioData: Partial<Usuario>): Promise<Usuario> {
+    console.log("Datos del usuario" + usuarioData.imagen)
     return this.usuarioService.create(usuarioData);
   }
 

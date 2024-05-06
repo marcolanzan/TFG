@@ -45,9 +45,9 @@ const RegisterScreen = () => {
         },
         body: JSON.stringify(userData),
       });
+      console.log(userData);
 
       if (!response.ok) {
-        console.log(userData);
         throw new Error('Error al registrar el usuario');
       }
 

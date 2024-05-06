@@ -20,7 +20,9 @@ export class UsuarioService {
 
   async create(usuarioData: Partial<Usuario>): Promise<Usuario> {
     const usuario = this.usuarioRepository.create(usuarioData);
-    return await this.usuarioRepository.save(usuario);
+    const createdUsuario = await this.usuarioRepository.save(usuario);
+    console.log('Datos del usuario creado:', createdUsuario); // Agregar console.log aquí
+    return createdUsuario;
   }
 
   async update(id: number, usuarioData: Partial<Usuario>): Promise<Usuario | undefined> {
@@ -35,6 +37,7 @@ export class UsuarioService {
   async remove(id: number): Promise<void> {
     await this.usuarioRepository.delete(id);
   }
+
   async findByEmailAndPassword(email: string, password: string): Promise<Usuario | null> {
     const usuario = await this.usuarioRepository.createQueryBuilder("usuario")
       .where("usuario.email = :email", { email })
@@ -48,10 +51,8 @@ export class UsuarioService {
       console.log('Usuario encontrado:', usuario.nome);
       return usuario;
     }
-  
   }
-
-  
-  
-
 }
+
+
+
