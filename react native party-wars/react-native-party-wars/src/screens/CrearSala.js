@@ -12,10 +12,11 @@ const CreateRoomScreen = () => {
   const [localizacion, setLocalizacion] = useState('');
   const [numeroParticipantes, setNumeroParticipantes] = useState('');
   const navigation = useNavigation();
-
+  let idNavigationJuegos = 0; // Cambiando de constante a variable
   const handleVerJuegos = () => {
-    navigation.navigate('VerJuegos');
+    navigation.navigate('VerJuegos', { idNavigationJuegos }); // Pasar el ID como un objeto
   };
+  
 
   const handleCreateRoom = async () => {
     try {
@@ -39,7 +40,10 @@ const CreateRoomScreen = () => {
         throw new Error('Error al crear la sala');
       }
 
+      const data = await response.json(); // Obtener el cuerpo de la respuesta
+      idNavigationJuegos = data; // Asignar directamente el número devuelto
       Alert.alert('Sala Creada', 'La sala se ha creado exitosamente');
+      console.log('ID de la sala creada:', idNavigationJuegos); // Imprimir el ID de la sala creada en la consola
 
       setNombre('');
       setDescripcion('');
@@ -130,5 +134,3 @@ const styles = StyleSheet.create({
 });
 
 export default CreateRoomScreen;
-
-

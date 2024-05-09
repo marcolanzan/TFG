@@ -2,7 +2,6 @@ import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common'
 import { Sala } from '../Entity/sala.entity';
 import { SalaService } from '../Service/sala.service';
 
-
 @Controller('salas')
 export class SalaController {
   constructor(private readonly salaService: SalaService) {}
@@ -18,8 +17,16 @@ export class SalaController {
   }
 
   @Post()
-  create(@Body() salaData: Partial<Sala>): Promise<Sala> {
-    return this.salaService.create(salaData);
+  async create(@Body() salaData: Partial<Sala>): Promise<number> {
+    try {
+      const salaId = await this.salaService.create(salaData);
+      console.log(salaId);
+      return salaId; // Devuelve el ID de la sala creada
+    } catch (error) {
+      // Manejo de errores si la creación de la sala falla
+      console.error('Error al crear la sala:', error);
+      throw error;
+    }
   }
 
   @Put(':id')
@@ -31,4 +38,39 @@ export class SalaController {
   remove(@Param('id') id: string): Promise<void> {
     return this.salaService.remove(parseInt(id, 10));
   }
+
+  @Post(':id/juegos/:juegoId')
+  async addJuegoToSala(@Param('id') salaId: string, @Param('juegoId') juegoId: string): Promise<void> {
+    await this.salaService.addJuegoToSala(parseInt(salaId, 10), parseInt(juegoId, 10));
+  }
+  
+  @Delete(':id/juegos/:juegoId')
+  async removeJuegoFromSala(@Param('id') salaId: string, @Param('juegoId') juegoId: string): Promise<void> {
+    await this.salaService.removeJuegoFromSala(parseInt(salaId, 10), parseInt(juegoId, 10));
+  }
+  
+  @Post(':id/usuarios/:usuarioId')
+  async addUsuarioToSala(@Param('id') salaId: string, @Param('usuarioId') usuarioId: string): Promise<void> {
+    await this.salaService.addUsuarioToSala(parseInt(salaId, 10), parseInt(usuarioId, 10));
+  }
+  
+  @Delete(':id/usuarios/:usuarioId')
+  async removeUsuarioFromSala(@Param('id') salaId: string, @Param('usuarioId') usuarioId: string): Promise<void> {
+    await this.salaService.removeUsuarioFromSala(parseInt(salaId, 10), parseInt(usuarioId, 10));
+  }
+
+
+  @Get(':id/juegos')
+  async findAllJuegosBySalaId(@Param('id') salaId: string): Promise<any[]> {
+    return this.salaService.findAllJuegosBySalaId(parseInt(salaId, 10));
+  }
+
+  @Get(':id/usuarios')
+  async findAllUsuariosBySalaId(@Param('id') salaId: string): Promise<any[]> {
+    return this.salaService.findAllUsuariosBySalaId(parseInt(salaId, 10));
+  }
+
 }
+
+
+

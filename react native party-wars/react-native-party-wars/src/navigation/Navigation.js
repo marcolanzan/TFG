@@ -8,6 +8,7 @@ import RegisterScreen from '../screens/RegisterScreen'; // Importa el componente
 import CrearJuego from '../screens/CrearJuego';
 import CrearSala from '../screens/CrearSala';
 import VerJuegos from '../screens/VerJuegos';
+import VerDatosSalas from '../screens/VeDatosSalas';
 const Tab = createBottomTabNavigator();
 
 export default function Navigation() {
@@ -87,6 +88,16 @@ export default function Navigation() {
             <Icon name="gamepad" color={color} size={size} />
           ),
         }}
+      />
+      <Tab.Screen
+      name = "VerDatosSalas"
+      component = {VerDatosSalas}
+      options = {{
+        tabBarLabel: 'Ver Salas',
+        tabBarIcon: ({ color, size }) => (
+          <Icon name="gamepad" color={color} size={size} />
+        ),
+      }}
       />
     </Tab.Navigator>
   );

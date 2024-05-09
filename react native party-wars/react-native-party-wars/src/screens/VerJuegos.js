@@ -1,15 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, ActivityIndicator } from 'react-native';
+import { View, Text, FlatList, ActivityIndicator, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+let idSala = 0;
 
-const ViewGamesScreen = () => {
+const ViewGamesScreen = ({ route }) => {
   const navigation = useNavigation();
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [salaId, setSalaId] = useState(null); // Variable para almacenar el ID de la sala
+  useEffect(() => {
+    if (route.params && route.params.idNavigationJuegos) {
+      const { idNavigationJuegos } = route.params;
+      console.log("el id de la sala es " + idNavigationJuegos);
+      idSala = idNavigationJuegos;
+      fetchGames();
+    }
+  }, [route.params]);
 
   const fetchGames = async () => {
     try {
-      const response = await fetch('http://192.168.1.90:3000/juegos');
+      const response = await fetch(`http://192.168.1.90:3000/juegos`);
       const data = await response.json();
       setGames(data);
       setLoading(false);
@@ -19,26 +29,44 @@ const ViewGamesScreen = () => {
     }
   };
 
-  useEffect(() => {
-    fetchGames(); // Realizar la primera llamada al cargar el componente
-
-    const intervalId = setInterval(fetchGames, 60000); // Realizar la llamada cada 60 segundos
-
-    // Limpiar el intervalo al desmontar el componente
-    return () => clearInterval(intervalId);
-  }, []);
-
   const handleCrearJuego = () => {
-    navigation.navigate('CrearJuego');
+    navigation.navigate('CrearJuego', { idNavigationJuegos: salaId });
+  };
+
+  const handleAddGame = async (juegoId) => {
+    try {
+      console.log (idSala, juegoId);
+      const response = await fetch(`http://192.168.1.90:3000/salas/${idSala}/juegos/${juegoId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Error al agregar el juego');
+      }
+
+      setGames(prevGames => prevGames.filter(game => game.id !== juegoId));
+      Alert.alert('Juego Agregado', 'El juego se ha agregado correctamente');
+    } catch (error) {
+      console.error('Error al agregar el juego:', error);
+      Alert.alert('Error', 'Ocurrió un error al agregar el juego. Por favor, inténtalo de nuevo.');
+    }
   };
 
   const renderGameItem = ({ item }) => (
-    <View style={{ padding: 10, borderBottomWidth: 1, borderBottomColor: '#ccc' }}>
-      <Text style={{ fontWeight: 'bold' }}>{item.nombre}</Text>
-      <Text>Propiedad: {item.propiedadJuego}</Text>
-      <Text>Descripción: {item.descripcionJuego}</Text>
-      <Text>Categoría: {item.categoriaJuego}</Text>
-      <Text>Normas: {item.normasJuego}</Text>
+    <View style={{ padding: 10, borderBottomWidth: 1, borderBottomColor: '#ccc', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+      <View>
+        <Text style={{ fontWeight: 'bold' }}>{item.nombre}</Text>
+        <Text>Propiedad: {item.propiedadJuego}</Text>
+        <Text>Descripción: {item.descripcionJuego}</Text>
+        <Text>Categoría: {item.categoriaJuego}</Text>
+        <Text>Normas: {item.normasJuego}</Text>
+      </View>
+      <TouchableOpacity onPress={() => handleAddGame(item.id)}>
+        <Text style={{ color: 'blue' }}>Agregar</Text>
+      </TouchableOpacity>
     </View>
   );
 
@@ -64,5 +92,4 @@ const ViewGamesScreen = () => {
 };
 
 export default ViewGamesScreen;
-
 
